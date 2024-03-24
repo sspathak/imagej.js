@@ -78,7 +78,6 @@ async function do_init(){
     const ij = await cheerpjRunLibrary(`/app${baseUrl}lib/ImageJ/ij.jar`);
     return ij
 }
-do_init().then(results => {window.ij = results}).catch(err => {console.log("failed to init")})
 // await cheerpjRunMain("net.imagej.Main", `/app${baseUrl}lib/ImageJ/imagej2-cheerpj-0-SNAPSHOT-all.jar`);
  
 </script>
