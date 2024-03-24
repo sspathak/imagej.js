@@ -72,17 +72,7 @@ async function applyPatches(){
     DirectDownloader.prototype.send = ddlSend;
 }
 
-await cheerpjInit({
-    clipboardMode: "java", // "permission" | "system" | "java"
-    javaProperties: [
-      "user.dir=/files",
-      `plugins.dir=/app${baseUrl}lib/ImageJ/plugins`
-    ],
-    fetch(){
-        debugger
-        return fetch(...arguments);
-    }
-});
+await cheerpjInit();
 await applyPatches();
 // cheerpjCreateDisplay(-1, -1, document.getElementById("container"));
 await cheerpjRunLibrary(`/app${baseUrl}lib/ImageJ/ij.jar`);
