@@ -74,7 +74,7 @@ async function applyPatches(){
 async function do_init(){
     await cheerpjInit();
     await applyPatches();
-    // cheerpjCreateDisplay(-1, -1, document.getElementById("container"));
+    cheerpjCreateDisplay(-1, -1, document.getElementById("container"));
     const ij = await cheerpjRunJar(`/app${baseUrl}lib/ImageJ/ij.jar`);
     // const ij = await cheerpjRunLibrary(`/app${baseUrl}lib/ImageJ/ij.jar`);
     return ij
